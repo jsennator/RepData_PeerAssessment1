@@ -11,10 +11,10 @@ output:
   activitydays <- tapply(activity$steps, activity$date, sum, na.rm=TRUE)
   
   # Compute the total number of steps each day (NA values removed)
-  sum_data <- aggregate(activity$steps, by=list(activity$date), FUN=sum, na.rm=TRUE)
+      sum_data <- aggregate(activity$steps, by=list(activity$date), FUN=sum, na.rm=TRUE)
   
   # Rename the attributes
-  names(sum_data) <- c("date", "total")
+     names(sum_data) <- c("date", "total")
   
   # Compute the histogram of the total number of steps each day
   hist(sum_data$total, 
