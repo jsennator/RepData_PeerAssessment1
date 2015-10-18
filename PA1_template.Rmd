@@ -14,7 +14,7 @@ Compute the total number of steps each day (NA values removed)
     names(sum_data) <- c("date", "total")
 ```  
 Compute the histogram of the total number of steps each day  
-```{r,echo=FALSE}  
+```{r,echo=TRUE}  
   hist(sum_data$total, 
       breaks=seq(from=0, to=25000, by=2500),
        col="purple", 
@@ -44,7 +44,7 @@ median is 10395
   names(mean_data) <- c("interval", "mean")
 ```
 Compute the time series plot    
-```{r,echo=FALSE}
+```{r,echo=TRUE}
   plot(mean_data$interval, 
        mean_data$mean, 
        type="l", 
@@ -113,7 +113,7 @@ Replaced each NA value by the mean of the steps
 ```    
  
   Compute the histogram of the total number of steps each day  
-```{r,echo=FALSE}
+```{r,echo=TRUE}
     hist(sum_data$total, 
          breaks=seq(from=0, to=25000, by=2500),
          col="purple", 
@@ -177,7 +177,7 @@ These values differ greatly from the estimates from the first part of the assign
 ```  
 
 Compute the time series plot  
-```{r,echo=FALSE}
+```{r,echo=TRUE}
     xyplot(mean ~ interval | daytype, mean_data, 
            type="l", 
            lwd=1, 
